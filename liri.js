@@ -6,17 +6,9 @@ var moment = require('moment');
 var keys = require("./keys");
 var Spotify = require('node-spotify-api');
 
-
-
-// var spotify = new Spotify(keys.spotify);
-
-// console.log(spotify);
-
 var clientInput = process.argv;
 var search = clientInput[2];
 var term = clientInput.slice(3).join(" ");
-console.log(search);
-console.log(term);
 
 function findMovie(movie) {
     console.log("inside findMovie: " + movie)
@@ -67,8 +59,6 @@ function findMovie(movie) {
 };
 
 function findMusic(song) {
-
-
     var spotify = new Spotify(keys.spotify);
 
     spotify.search({
@@ -76,15 +66,16 @@ function findMusic(song) {
         query: song,
         limit: 1
     }, function (err, data) {
+
         if (err) {
             return console.log('Error occurred: ' + err);
         }
-
-          console.log(data.tracks.items[0].album.artists[0].name);
-//   console.log(data.tracks.items[0].artists[0].name);
-  console.log(data.tracks.items[0].name);
-  console.log(data.tracks.items[0].external_urls.spotify);
-  console.log(data.tracks.items[0].album.name);
+        
+        console.log(data.tracks.items[0].album.artists[0].name);
+        //   console.log(data.tracks.items[0].artists[0].name);
+        console.log(data.tracks.items[0].name);
+        console.log(data.tracks.items[0].external_urls.spotify);
+        console.log(data.tracks.items[0].album.name);
     });
 }
 
@@ -113,15 +104,27 @@ function findConcert(artist) {
     );
 };
 
+function randomTxt() {
+    fs.readFile("random.txt", "utf8", function (error, data) {
+        if (error) {
+            return console.log(error);
+        }
+        var dataArr = data.split(",");
+        if (dataArr === "do-what-it-says") {
+            throw "Error: Infinite Loop"
 
-
+        } else {
+            console.log(dataArr[0]);
+            console.log(dataArr[1] + "\n");
+            liriBot(dataArr[0], dataArr[1])
+        }
+    });
+}
 
 function liriBot(search, term) {
     if (search === "concert-this") {
-        // console.log("concert Search: " + term);
         findConcert(term);
     } else if (search === "spotify-this-song") {
-        // console.log("search song: " + term);
         term = term || "ace of base"
         findMusic(term)
     } else if (search === "movie-this") {
@@ -130,18 +133,14 @@ function liriBot(search, term) {
         }
         findMovie(term);
     } else if (search === "do-what-it-says") {
-        console.log("do what is says thingy");
-        var random = fs.readFile("random.txt")
-        // console.log(random);
+        console.log("do what is says");
+        randomTxt()
     } else {
         console.log("not a valad input");
     }
 }
 
-
-
-
-liriBot(search, term)
+liriBot(search, term);
 
 var data = {
     "tracks": {
@@ -230,10 +229,4 @@ var data = {
         "previous": null,
         "total": 151
     }
-}
-
-//   console.log(data.tracks.items[0].album.artists[0].name);
-// //   console.log(data.tracks.items[0].artists[0].name);
-//   console.log(data.tracks.items[0].name);
-//   console.log(data.tracks.items[0].external_urls.spotify);
-//   console.log(data.tracks.items[0].album.name);
+};
