@@ -84,8 +84,8 @@ SPOTIFY_SECRET=your-spotify-secret
 
      * The text in random.txt can be edited to search movie-this and concert-this as well.
      
- ### NOTE
- * In addition to logging the data to the terminal/bash window, the app will also log the output data to a .txt file called `log.txt`.**
+ #### NOTE
+ * In addition to logging the data to the terminal/bash window, the app will also log the output data to a .txt file called `log.txt`.
      
 ### NPM Packages used
 
@@ -100,3 +100,8 @@ SPOTIFY_SECRET=your-spotify-secret
    * [DotEnv](https://www.npmjs.com/package/dotenv)
    
    * [fs] is a native node package.
+
+## Watch a demo 
+
+* Click the link to watch a full Demo of the app. [liri-node-app-Demo](http://www.google.com)
+   
