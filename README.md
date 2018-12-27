@@ -6,7 +6,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 ### Instructions on how to use Liri-bot
 
-1. Copy the repository to your computer.  Navigate to the root of your project and run `npm install` &mdash; in a terminal to download the nessesary npm packages.  
+1. Copy the `liri-node-app` repository to your computer.  Navigate to the root of your project and run `npm install` in a terminal to download the nessesary npm packages.  
 
 2. Next, create a file named `.env`, add the following to it, replacing the values with your API keys for spotify:
 
@@ -17,8 +17,7 @@ SPOTIFY_ID=your-spotify-id
 SPOTIFY_SECRET=your-spotify-secret
 
 ```
-
-   * This file will be used by the `dotenv` package to set environment variables to the global `process.env` object in node.
+   * This file will be used by the `dotenv` package to set environment variables to the global `process.env` object in node.*
      
    * The Spotify API requires you sign up as a developer to generate the necessary credentials. You can visit <https://developer.spotify.com/my-applications/#!/> in order to generate a **client id** and **client secret**:
 
@@ -58,9 +57,7 @@ SPOTIFY_SECRET=your-spotify-secret
 
      * The album that the song is from
 
-    * If no song is provided then your program will default to "The Sign" by Ace of Base.
-
-    * Liri-node-app utilizes the [node-spotify-api](https://www.npmjs.com/package/node-spotify-api) package in order to retrieve song information from the Spotify API.
+    * If no song is provided then the program will default to "The Sign" by Ace of Base.
 
 3. `node liri.js movie-this '<movie name here>'`
 
@@ -103,6 +100,8 @@ SPOTIFY_SECRET=your-spotify-secret
    * [Moment](https://www.npmjs.com/package/moment)
 
    * [DotEnv](https://www.npmjs.com/package/dotenv)
+   
+       * Liri-node-app utilizes the [node-spotify-api](https://www.npmjs.com/package/node-spotify-api) package in order to retrieve song information from the Spotify API.
 
 ### BONUS
 
@@ -116,6 +115,4 @@ SPOTIFY_SECRET=your-spotify-secret
 
 * Please submit the link to the Github Repository!
 
-
-
-
+&mdash;
