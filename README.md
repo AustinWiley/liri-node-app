@@ -4,7 +4,7 @@
 
 LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.   LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 
-### Instructions on how to use Liri-bot
+### Instructions on how to use Liri-node-app
 
 1. Copy the `liri-node-app` repository to your computer.  Navigate to the root of your project and run `npm install` in a terminal to download the nessesary npm packages.  
 
@@ -37,7 +37,7 @@ SPOTIFY_SECRET=your-spotify-secret
 
 1. `node liri.js concert-this <artist/band name here>`
 
-   * This will search the Bands in Town Artist Events API (`"https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"`) for an artist and render the following information about each event to the terminal:
+   * This will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
 
      * Name of the venue
 
@@ -75,8 +75,6 @@ SPOTIFY_SECRET=your-spotify-secret
      ```
 
    * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
-
-   * You'll use the `axios` package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use `trilogy`.
 
 4. `node liri.js do-what-it-says`
 
