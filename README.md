@@ -17,10 +17,10 @@ SPOTIFY_ID=your-spotify-id
 SPOTIFY_SECRET=your-spotify-secret
 
 ```
-   * This file will be used by the `dotenv` package to set environment variables to the global `process.env` object in node.*
+   * This file will be used by the `dotenv` package to set environment variables to the global `process.env` object in node.
      
-   * The Spotify API requires you sign up as a developer to generate the necessary credentials. You can visit <https://developer.spotify.com/my-applications/#!/> in order to generate a **client id** and **client secret**:
-
+   * The Spotify API requires you sign up as a developer to generate the necessary credentials. You can visit                      <https://developer.spotify.com/my-applications/#!/> in order to generate a **client id** and **client secret**:
+   
 3. Open a node termial to run the `liri.js` file.
 
 4. liri.js can take in one of the following commands:
@@ -33,7 +33,7 @@ SPOTIFY_SECRET=your-spotify-secret
 
    * `do-what-it-says`
 
-### What Each Command will Do
+### What Each Command Does
 
 1. `node liri.js concert-this <artist/band name here>`
 
@@ -84,11 +84,11 @@ SPOTIFY_SECRET=your-spotify-secret
 
      * The text in random.txt can be edited to search movie-this and concert-this as well.
      
-### NPM Packages used About Technologies used
+ ### NOTE
+ * In addition to logging the data to the terminal/bash window, the app will also log the output data to a .txt file called `log.txt`.**
+     
+### NPM Packages used
 
-* LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
-* LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
-* LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
    * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
 
    * [Axios](https://www.npmjs.com/package/axios)
@@ -99,18 +99,4 @@ SPOTIFY_SECRET=your-spotify-secret
 
    * [DotEnv](https://www.npmjs.com/package/dotenv)
    
-       * Liri-node-app utilizes the [node-spotify-api](https://www.npmjs.com/package/node-spotify-api) package in order to retrieve song information from the Spotify API.
-
-### BONUS
-
-* In addition to logging the data to your terminal/bash window, output the data to a .txt file called `log.txt`.
-
-* Make sure you append each command you run to the `log.txt` file. 
-
-* Do not overwrite your file each time you run a command.
-
-### Reminder: Submission on BCS
-
-* Please submit the link to the Github Repository!
-
-&mdash;
+   * [fs] is a native node package.
