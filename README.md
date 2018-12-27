@@ -39,11 +39,11 @@ SPOTIFY_SECRET=your-spotify-secret
 
    * This will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
 
-     * Name of the venue
-
-     * Venue location
-
-     * Date of the Event (use moment to format this as "MM/DD/YYYY")
+      ```
+       * Name of the venue
+       * Venue location
+       * Date of the Event (use moment to format this as "MM/DD/YYYY")
+      ```
 
 2. `node liri.js spotify-this-song '<song name here>'`
 
