@@ -19,7 +19,7 @@ SPOTIFY_SECRET=your-spotify-secret
 ```
    * This file will be used by the `dotenv` package to set environment variables to the global `process.env` object in node.
      
-   * The Spotify API requires you sign up as a developer to generate the necessary credentials. You can visit                      <https://developer.spotify.com/my-applications/#!/> in order to generate a **client id** and **client secret**:
+   * The Spotify API requires you sign up as a developer to generate the necessary credentials. You can visit                      <https://developer.spotify.com/my-applications/#!/> in order to generate a **client id** and **client secret.**
    
 3. Open a node termial to run the `liri.js` file.
 
