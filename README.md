@@ -42,7 +42,7 @@ SPOTIFY_SECRET=your-spotify-secret
       ```
        * Name of the venue
        * Venue location
-       * Date of the Event (use moment to format this as "MM/DD/YYYY")
+       * Date of the Event
       ```
 
 2. `node liri.js spotify-this-song '<song name here>'`
