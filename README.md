@@ -98,7 +98,8 @@ SPOTIFY_SECRET=your-spotify-secret
 
    * [DotEnv](https://www.npmjs.com/package/dotenv)
    
-   * [fs](https://www.npmjs.com/package/file-system) is a native node package.
+   * [fs](https://www.npmjs.com/package/file-system)
+      * Fs is a native node package.
 
 ## Watch the Demo 
 
