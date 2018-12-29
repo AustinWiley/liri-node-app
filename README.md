@@ -102,5 +102,5 @@ SPOTIFY_SECRET=your-spotify-secret
 
 ## Watch the Demo 
 
-* Click the link to watch a full Demo of the app. [liri-node-app-Demo](http://www.google.com)
+* Click the link to watch a full Demo of the app. [liri-node-app-Demo](https://drive.google.com/file/d/10l92vW4SYR_vJq7nfvVAFDxxpcNnxcUF/view)
    
