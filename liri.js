@@ -35,17 +35,23 @@ function findMovie(movie) {
                 var plot = movieData.Plot;
                 var actors = movieData.Actors;
                 var divider = "\n====================================================\n"
+                var terminalResponse = divider +
+                    "Movie Title: " + movie +
+                    "\nRelease Date: " + year +
+                    "\nIMDB Rating: " + imdbRating +
+                    "\nRotten Tomatoes: " + rottenRating +
+                    "\nCountry: " + countryProduced +
+                    "\nLanguage: " + language +
+                    "\nPlot: " + plot +
+                    "\nActors/Actresses: " + actors + divider;
 
-                console.log(divider +
-                    "Movie Title: " + movie,
-                    "\nRelease Date: " + year,
-                    "\nIMDB Rating: " + imdbRating,
-                    "\nRotten Tomatoes: " + rottenRating,
-                    "\nCountry: " + countryProduced,
-                    "\nLanguage: " + language,
-                    "\nPlot: " + plot,
-                    "\nActors/Actresses: " + actors + divider
-                );
+                console.log(terminalResponse)
+
+                fs.appendFile("log.txt", terminalResponse, function (err) {
+                    if (err) {
+                        return console.log(err);
+                    }
+                });
             }
         }
     );
@@ -61,12 +67,21 @@ function findMusic(song) {
     }, function (err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
+        } else {
+            var divider = "\n========================================================\n";
+
+            var terminalResponse = divider + "Artist: " + data.tracks.items[0].album.artists[0].name +
+                "\nSong Title: " + data.tracks.items[0].name +
+                "\nAlbum Title: " + data.tracks.items[0].album.name +
+                "\nLink to Song: " + data.tracks.items[0].external_urls.spotify + divider;
+            console.log(terminalResponse);
+
+            fs.appendFile("log.txt", terminalResponse, function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+            });
         }
-        var divider= "\n========================================================\n";
-        console.log(divider + "Artist: " + data.tracks.items[0].album.artists[0].name,
-            "\nSong Title: " + data.tracks.items[0].name,
-            "\nAlbum Title: " + data.tracks.items[0].album.name,
-            "\nLink to Song: " + data.tracks.items[0].external_urls.spotify + divider);
     });
 }
 
@@ -79,12 +94,30 @@ function findConcert(artist) {
             } else {
                 var concertData = response.data;
                 var divider = "\n============================= " + artist + " In Concert =============================\n";
+                var dividerTwo = "\n-----------------------------------------------------";
+
+                console.log(divider)
+
+                fs.appendFile("log.txt", divider, function (err) {
+                    if (err) {
+                        return console.log(err);
+                    }
+                });
+
                 for (var i = 0; i < concertData.length; i++) {
                     var venue = concertData[i].venue.name;
                     var city = concertData[i].venue.city;
                     var country = concertData[i].venue.country;
                     var when = moment(concertData[i].datetime).format('MM/DD/YYYY');
-                    console.log(divider + venue + "\n" + city + ", " + country + "\n" + when)
+
+                    var terminalResponse = venue + "\n" + city + ", " + country + "\n" + when + dividerTwo;
+                    console.log(terminalResponse);
+
+                    fs.appendFile("log.txt", terminalResponse, function (err) {
+                        if (err) {
+                            return console.log(err);
+                        }
+                    });
                 }
             }
         }
@@ -123,7 +156,7 @@ function liriBot(search, term) {
         console.log("do what is says");
         randomTxt()
     } else {
-        console.log("not a valad input");
+        console.log("\nnot a valad input\nYou can use the following commands:\n\n*movie-this\n*spotify-this-song\n*concert-this\n*do-what-it-says");
     }
 }
 
