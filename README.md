@@ -4,6 +4,10 @@
 
 LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.   LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 
+## Watch the Demo 
+
+* Click the link to watch a full Demo of the app. [liri-node-app-Demo](https://drive.google.com/file/d/10l92vW4SYR_vJq7nfvVAFDxxpcNnxcUF/view)
+
 ### Instructions on how to use Liri-node-app
 
 1. Copy the `liri-node-app` repository to your computer.  Navigate to the root of your project and run `npm install` in a terminal to download the nessesary npm packages.  
@@ -100,8 +104,3 @@ SPOTIFY_SECRET=your-spotify-secret
    
    * [fs](https://www.npmjs.com/package/file-system)
       * Fs is a native node package.
-
-## Watch the Demo 
-
-* Click the link to watch a full Demo of the app. [liri-node-app-Demo](https://drive.google.com/file/d/10l92vW4SYR_vJq7nfvVAFDxxpcNnxcUF/view)
-   
