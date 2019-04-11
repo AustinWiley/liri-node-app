@@ -87,6 +87,7 @@ SPOTIFY_SECRET=your-spotify-secret
      * The text in random.txt can be edited to search movie-this and concert-this as well.
 
  #### NOTE
+ 
  * In addition to logging the data to the terminal/bash window, the app will also log the output data to a .txt file called `log.txt`.
 
 ### NPM Packages used
